@@ -1,0 +1,50 @@
+ /* PRODUCTS */
+    .products-section { background:#080808; }
+    .products-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 30% at 50% 100%,rgba(201,168,76,0.05) 0%,transparent 70%); pointer-events:none; }
+    .filter-tabs { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:32px; }
+    .filter-btn { padding:8px 22px; border:1px solid rgba(201,168,76,0.3); background:transparent; color:rgba(201,168,76,0.7); font-family:'Tajawal',sans-serif; font-size:14px; font-weight:700; cursor:pointer; transition:all 0.3s; }
+    .filter-btn:hover,.filter-btn.active { background:var(--gold); color:#000; border-color:var(--gold); box-shadow:0 0 16px rgba(201,168,76,0.4); }
+
+    /* PRODUCTS GRID */
+    .products-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; margin-top:48px; }
+
+    /* PRODUCT CARD */
+    .product-card { background:var(--card); border:1px solid rgba(201,168,76,0.18); overflow:hidden; display:flex; flex-direction:column; transition:all 0.35s; position:relative; }
+    .product-card:hover { border-color:rgba(201,168,76,0.55); transform:translateY(-5px); box-shadow:0 12px 40px rgba(0,0,0,0.5); }
+
+    /* IMAGE SLIDER INSIDE CARD */
+    .card-slider { position:relative; height:240px; overflow:hidden; background:#000; user-select:none; }
+    .card-slides { display:flex; height:100%; transition:transform 0.4s cubic-bezier(0.4,0,0.2,1); will-change:transform; }
+    .card-slide { min-width:100%; height:100%; flex-shrink:0; position:relative; }
+    .card-slide img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s; }
+    .product-card:hover .card-slide img { transform:scale(1.04); }
+
+    /* No overlay / tint — images fully clear */
+    .card-slide-overlay { display:none; }
+
+    /* Slider arrows inside card */
+    .card-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:10; width:36px; height:36px; border-radius:50%; border:1.5px solid rgba(201,168,76,0.7); background:rgba(0,0,0,0.55); backdrop-filter:blur(6px); color:var(--gold); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.25s; font-size:13px; opacity:0; }
+    .product-card:hover .card-arrow { opacity:1; }
+    .card-arrow:hover { background:var(--gold); color:#000; border-color:var(--gold); }
+    .card-arrow:disabled { opacity:0 !important; cursor:default; }
+    .card-arrow.prev { right:10px; }
+    .card-arrow.next { left:10px; }
+
+    /* Dots inside card */
+    .card-dots { position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:5px; z-index:10; }
+    .card-dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.35); border:none; cursor:pointer; transition:all 0.25s; padding:0; }
+    .card-dot.active { background:var(--gold); width:16px; border-radius:3px; }
+
+    /* Counter badge top-left */
+    .card-counter { position:absolute; top:10px; left:10px; z-index:10; background:rgba(0,0,0,0.6); backdrop-filter:blur(6px); border:1px solid rgba(201,168,76,0.4); color:var(--gold); font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; font-family:'Cinzel',serif; letter-spacing:0.05em; }
+
+    /* Icon badge top-right */
+    .prod-icon-badge { position:absolute; top:10px; right:10px; z-index:10; width:38px; height:38px; background:rgba(0,0,0,0.65); backdrop-filter:blur(6px); border:1px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:17px; }
+
+    /* Card body */
+    .prod-body { padding:20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+    .prod-name { font-size:19px; font-weight:900; color:#fff; }
+    .prod-name-en { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:#8a7a5a; margin-top:2px; }
+    .prod-rating { display:flex; align-items:center; gap:6px; }
+    .stars { display:flex; gap:2px; color:var(--gold); font-size:13px; }
+    .star-empty { color:#8a7a5a; }

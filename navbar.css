@@ -1,0 +1,22 @@
+ /* NAVBAR */
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:999; height:72px; display:flex; align-items:center; padding:0 24px; transition:all 0.4s; backdrop-filter:blur(10px); background:rgba(0,0,0,0.25); border-bottom:1px solid rgba(255,255,255,0.05); }
+    .navbar.scrolled { background:rgba(0,0,0,0.78); border-bottom-color:rgba(201,168,76,0.3); box-shadow:0 4px 30px rgba(201,168,76,0.08); }
+    .navbar-inner { max-width:1200px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; }
+    .logo-wrap { display:flex; align-items:center; gap:12px; }
+    .logo-circle { width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.6); box-shadow:0 0 12px rgba(201,168,76,0.35); font-family:'Cinzel',serif; color:var(--gold); font-weight:700; font-size:13px; letter-spacing:1px; flex-shrink:0; }
+    .logo-name { font-weight:700; font-size:16px; color:var(--gold); }
+    .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
+    .nav-links a { font-size:14px; font-weight:500; color:rgba(245,230,200,0.8); transition:color 0.2s; position:relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; transform-origin:center; }
+    .nav-links a:hover { color:var(--gold); }
+    .nav-links a:hover::after { transform:scaleX(1); }
+    .nav-socials { display:flex; align-items:center; gap:8px; }
+    .soc-icon { width:34px; height:34px; border-radius:50%; border:1px solid rgba(201,168,76,0.55); display:flex; align-items:center; justify-content:center; color:var(--gold); transition:all 0.3s; font-size:15px; }
+    .soc-icon:hover { background:var(--gold); color:#000; box-shadow:0 0 10px rgba(201,168,76,0.5); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .hamburger span { width:24px; height:2px; background:var(--gold); border-radius:2px; }
+    .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; background:rgba(0,0,0,0.96); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:20px 24px; flex-direction:column; gap:16px; z-index:998; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { font-size:16px; font-weight:500; color:rgba(245,230,200,0.8); padding-bottom:12px; border-bottom:1px solid rgba(201,168,76,0.1); }
+    .mobile-menu a:hover { color:var(--gold); }
+    .mobile-socials { display:flex; gap:10px; padding-top:4px; }
